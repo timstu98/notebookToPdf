@@ -11,7 +11,7 @@ save_to = 'pdfs_content' #Make folder where you would like it to save
 # I ran it from git bash and had to install a couple of packages
 
 # If a file is unsuccessful, I suggest opening it, from its .html saved in its folder, in your browser and printing to pdf from there.
-# Then change the name to be consistent with the rest and add it to your pdf folder. This means the program will not attempt to convert it in future. 
+# Then change the name to be consistent with the rest and add it to your pdf folder. This means the program will not attempt to convert it in future. eg 1_1_Collaboration_index.pdf
 
 def return_parts_path(full_path):
     parts = []
