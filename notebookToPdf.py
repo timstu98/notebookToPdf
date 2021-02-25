@@ -1,7 +1,7 @@
 import os
 import shutil
 
-redo_conversion = False
+redo_conversion = False #In case you want to redo all the conversions for some reason
 
 bnta_repo_name = 'content' #Replace with your repo name
 save_to = 'pdfs_content' #Make folder where you would like it to save
