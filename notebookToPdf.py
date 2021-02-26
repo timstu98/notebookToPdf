@@ -1,17 +1,26 @@
-import os
-import shutil
-
-redo_conversion = False #In case you want to redo all the conversions for some reason
-
-bnta_repo_name = 'content' #Replace with your repo name
-save_to = 'pdfs_content' #Make folder where you would like it to save
-
 # Location of this file should be in the same folder as the bnta repo
 # To run ---> py -u notebookToPdf.py
 # I ran it from git bash and had to install a couple of packages
 
 # If a file is unsuccessful, I suggest opening it, from its .html saved in its folder, in your browser and printing to pdf from there.
 # Then change the name to be consistent with the rest and add it to your pdf folder. This means the program will not attempt to convert it in future. eg 1_1_Collaboration_index.pdf
+
+#TO DO:
+#Look into Continuous Integration with CircleCl so it automatically runs from git 
+
+######### Import Modules #########
+
+import os
+import shutil
+
+######### Configure #########
+
+bnta_repo_name = 'content' #Replace with your repo name
+save_to = 'pdfs_content' #Make folder where you would like it to save
+
+redo_conversion = False #In case you want to redo all the conversions for some reason
+
+######### CODE #########
 
 def return_parts_path(full_path):
     parts = []
