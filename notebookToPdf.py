@@ -69,7 +69,12 @@ def entire_fn():
                 move_to = os.path.join(save_location, pdf_name)
 
                 if day_no:
-                    print('From {}: {} {}' .format(parts[1],parts[2],parts[3]),end=':           ')
+                    if len(parts) == 4:
+                        print('From {}: {} {}' .format(parts[1],parts[2],parts[3]),end=':           ')
+                    elif len(parts) == 3:
+                        print('From {}: {}' .format(parts[1],parts[2]),end=':           ')
+                    else:
+                        print('File structure is not as expected!!!!!!')
                 else:
                     print('From content:', parts[1],end=':          ')
 
