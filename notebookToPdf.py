@@ -36,11 +36,14 @@ def check_for_day(parts):
     day_no = None
     for part in parts:
         if part.startswith('Day'):
-            day_no = int(part[4:])
+            if len(part[4:]) <= 2:
+                day_no = int(part[4:])
+            else:
+                day_no = part[4:]
     return day_no
 
 def change_name(parts,day_no):
-    if day_no:
+    if isinstance(day_no, int):
         week_no = (day_no-1)//5 + 1
         week_day = (day_no-1) % 5 + 1
         prefix = str(week_no) + '_' + str(week_day) + '_'
